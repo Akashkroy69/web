@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .animatedBox{
+      background-color: red;
+      width:100px;
+      height:100px;
+      /*                    dur */
+      animation: firstAnimation 3s infinite;
+    }
+    .davidAnimation{
+      background-color: red;
+      width:100px;
+      height:100px;
+    animation: secondAnimation 3s infinite;
+    }
+    .joceAnimation{
+      background-color: red;
+      width:100px;
+      height:100px;
+      animation:thirdanimation 4s infinite;
+    }
+    
+    @keyframes firstAnimation{
+      from {background-color: blue;}
+      to {background-color: yellow;}
+    }
+    /* david */
+    @keyframes SecondAnimation{
+      from{background-color: white;}
+      to {background-color: brown;}
+    }
+
+
+
+    /* jocelyn animation */
+    
+    @keyframes thirdAnimation{
+      from{background-color: green;}
+      to{background-color: violet;}
+    }
+    
+  </style>
+</head>
+
+<body>
+<div class="animatedBox">
+  BOX
+</div>
+
+  <div class="davidAnimation">
+    BOX David
+  </div>
+
+  <div class="joceAnimation">
+    BOX jocelyn
+  </div>
+  
+</body>
+
+
+  
+
+</html>

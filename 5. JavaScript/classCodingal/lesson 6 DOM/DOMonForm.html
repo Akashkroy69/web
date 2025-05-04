@@ -12,14 +12,13 @@
 </form> 
 
 <p>These are the values of each element in the form:</p>
-
 <p id="demo"></p>
 
 <script>
 const x = document.forms["frm1"];
 let text = "";
 function submitForm(){
-    for (let i = 0; i < x.length ;i++) {
+    for (let i = 0; i < x.length;i++) {
   text += x.elements[i].value + "<br>";
 }
 document.getElementById("demo").innerHTML = text;

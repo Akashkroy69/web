@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4 text-center">Explore the Solar System</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('sun')">Sun</button>
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('mercury')">Mercury</button>
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('venus')">Venus</button>
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('earth')">Earth</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('mars')">Mars</button>
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('jupiter')">Jupiter</button>
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('saturn')">Saturn</button>
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('uranus')">Uranus</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('neptune')">Neptune</button>
+                <button class="btn btn-primary btn-block mb-3" onclick="showImage('pluto')">Pluto</button>
+            </div>
+        </div>
+        <div class="text-center mt-5" id="image-container">
+            <!-- Image will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (jQuery and Popper.js are required) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function showImage(planet) {
+            var imageUrl = '';
+            switch (planet) {
+                case 'sun':
+                    imageUrl = 'https://source.unsplash.com/featured/?sun';
+                    break;
+                case 'mercury':
+                    imageUrl = 'https://source.unsplash.com/featured/?mercury';
+                    break;
+                case 'venus':
+                    imageUrl = 'https://source.unsplash.com/featured/?venus';
+                    break;
+                case 'earth':
+                    imageUrl = 'https://source.unsplash.com/featured/?earth';
+                    break;
+                case 'mars':
+                    imageUrl = 'https://source.unsplash.com/featured/?mars';
+                    break;
+                case 'jupiter':
+                    imageUrl = 'https://source.unsplash.com/featured/?jupiter';
+                    break;
+                case 'saturn':
+                    imageUrl = 'https://source.unsplash.com/featured/?saturn';
+                    break;
+                case 'uranus':
+                    imageUrl = 'https://source.unsplash.com/featured/?uranus';
+                    break;
+                case 'neptune':
+                    imageUrl = 'https://source.unsplash.com/featured/?neptune';
+                    break;
+                case 'pluto':
+                    imageUrl = 'https://source.unsplash.com/featured/?pluto';
+                    break;
+                default:
+                    imageUrl = 'https://source.unsplash.com/featured/?solarsystem';
+            }
+            var imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = `<img src="${imageUrl}" class="img-fluid" alt="${planet}" style="max-width: 400px;">`;
+            document.body.style.background = `url(${imageUrl})`;
+            document.body.style.backgroundSize= `cover`;
+        }
+    </script>
+</body>
+
+</html>

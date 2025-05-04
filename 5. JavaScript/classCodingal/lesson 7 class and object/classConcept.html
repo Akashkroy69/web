@@ -7,8 +7,15 @@
     <title>Class Concept</title>
 </head>
 
-<body>
+<body bgcolor="red" text="white">
+    <h1>hello buddy</h1>
     <script>
+         for(var i =0;i<15;i=i+1){
+            document.write("hello, i: ",i,"<br>")
+        }
+        for(var i =0;i<15;i=i+1){
+            document.write("hello")
+        }
         class Person {
             static myStaticProperty = "Hello, I'm static!";
             constructor(nameV, ageV, genderValue, isStudentV) {
@@ -22,6 +29,7 @@
                 console.log("Hello!", this.name);
             }
         }
+       
 
         // Creating an instance of the class
         let person = new Person("John", 25, true);

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .youtube-video {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+    .youtube-video iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Our Website</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra nisi nec efficitur ultrices. Donec rutrum enim eu turpis luctus, ac dapibus orci vehicula. Mauris non neque eget justo consequat gravida. Nullam convallis ipsum justo, a tempus odio lobortis non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vestibulum libero ut sapien venenatis, ac volutpat justo dapibus.</p>
+      
+      <h2>Our Location</h2>
+      <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248369.2854444827!2d-0.24168104370111062!3d51.5287718413774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ce422f5ebd%3A0x37e8b4a69043d42c!2sLondon%2C%20UK!5e0!3m2!1sen!2suk!4v1615483848324!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      
+      <h2>Watch Our Video</h2>
+      <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NLb5RyuJwR0?si=-j497FdodI64Pq9O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
